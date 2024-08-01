@@ -6,203 +6,596 @@
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+
+		<title>Peter Hatton</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/academicons.css" />
+
+		<style>
+			.containers {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+			}
+
+			.row {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				gap: 10px; /* Adjust the gap between items as needed */
+			}
+
+			.col-4 {
+				flex: 0 0 11%; /* Adjust the percentage as needed to control the size of the boxes */
+				max-width: 30%; /* Adjust the percentage as needed to control the size of the boxes */
+			}
+
+			.col-12-mobile {
+				flex: 0 0 43%;
+				max-width: 43%;
+			}
+
+			.item {
+				margin-bottom: 20px; /* Adjust the spacing between items as needed */
+				padding: 15px; /* Adjust the padding as needed for the desired buffer */
+				background: #ffffff; /* Optional: Add a background color to visually see the padding
+				/* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); Optional: Add a subtle box-shadow for better visual separation */
+			}
+
+			.image.fit {
+				width: 100%;
+				height: auto;
+			}
+
+			.contact-container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				text-align: center;
+			}
+		
+			.publications {
+				font-size: 0.5em;
+				text-align: left;
+				padding: 5px 0;
+				line-height: 2; 
+			}
+		
+			.author-name {
+				font-weight: bold;
+			}
+		
+			#logo {
+				text-decoration: none;
+				color: inherit;
+			}
+			#logo:hover {
+				text-decoration: none;
+			}
+		
+			.image-side-container {
+				display: flex;
+				align-items: center;
+			}
+	
+			.image-Rside-container {
+				display: flex;
+				align-items: center;
+			}
+		
+			.image.side img {
+				width: 300px; /* Set the width you want */
+				height: auto; /* Maintain aspect ratio */
+				display: block; /* Ensure the image is treated as a block element */
+			}
+		
+			.imtext {
+				margin-left: 20px; /* Adjust spacing between image and text */
+				flex-grow: 1; /* Allow the text to take up remaining space */
+				font-size: 0.75em;
+				line-height: 1.5
+			}
+			
+			figcaption {
+				margin-top: 1px; /* Space between image and caption */
+				font-size: 0.6em; /* Slightly smaller font for caption */
+				color: #000000; /* Grey color for caption */
+				font-weight: bold; /* Make caption bold */
+        		text-align: left; /* Left-align the caption */
+			}
+		</style>
+		
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Header -->
-			<div id="header">
-
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
-
+		<div id="header">
+			<div class="top">
+				<!-- Logo -->
+				<div id="logo">
+					<h1 id="title">
+						Dr. Peter J. Hatton
+					</h1>
+					<p>
+						Computational Materials Science<br>and Advanced Scientific Computing
+					</p>
 				</div>
 
-				<div class="bottom">
-
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-
-				</div>
-
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="#top" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+						<!-- <li><a href="#publications" id="publications-link"><span class="icon solid fa-bookmark">Research Highlights</span></a></li>
+							<li><a style="font-size: 0.6em; padding: 1px 35px;" href="#PMI">Plasma-Material Interactions</a></li>
+							<li><a style="font-size: 0.6em; padding: 1px 35px;" href="#FUTURE">Complex Oxide Interfaces</a></li>
+							<li><a style="font-size: 0.6em; padding: 1px 35px;" href="#CdTe">CdTe Solar Cells</a></li> -->
+						<li><a href="#hopdecorate" id="hopdecorate-link"><span class="icon fa-code">Hop-Decorate</span></a></li>
+						<li><a href="#portfolio" id="portfolio-link"><span class="icon fa-code">Personal Projects</span></a></li>
+						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+					</ul>
+				</nav>
 			</div>
+
+			<div class="bottom">
+				<!-- Social Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/PeteHatton" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+					<li><a href="https://scholar.google.com/citations?user=GsTH8TwAAAAJ&hl=en&oi=ao" class="ai ai-google-scholar" target="_blank"><span class="label"></span></a></li>
+					<li><a href="https://orcid.org/0000-0002-2914-2200" class="ai ai-orcid" target="_blank"></a></li>
+					<li><a href="./CV_PostDoc__LANL_.pdf" class="ai ai-cv" target="_blank"></a></li>
+					<li><a href="https://www.linkedin.com/in/peter-hatton-82653430a/" class="fab fa-linkedin-in" target="_blank"><span class="label"></span></a></li>
+					<li><a href="#contact" class="icon fa-envelope"></a></li>
+				</ul>
+			</div>
+		</div>
 
 		<!-- Main -->
-			<div id="main">
+		<div id="main">
 
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
+			<!-- Intro -->
+			<section id="top" class="one dark cover"  style="max-height: 350px;">
+				<div class="container">
+					<style>
+						.reduce-gap {
+							margin: 0;
+						}
+						.one.dark.cover {
+							display: flex;
+							align-items: center; /* Vertically center the content */
+							justify-content: center; /* Horizontally center the content */
+						}
+					</style>
+					
+					<h2 class="alt reduce-gap" style="color: #000000;">
+						<strong style="font-weight: bold;">
+							Dr. Peter J. Hatton (Pete)
+						</strong>
+					</h2>
 
-							<header>
-								<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
-								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
-								<p>Ligula scelerisque justo sem accumsan diam quis<br />
-								vitae natoque dictum sollicitudin elementum.</p>
-							</header>
+					<p class="reduce-gap" style="color: #3ea09f;">
+						<strong>
+							Computational Materials Science<br>and Advanced Scientific Computing
+						</strong>
+					</p>
 
-							<footer>
-								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
-							</footer>
+					<ul class="icons">
+						<li><a href="https://github.com/PeteHatton" class="icon brands fa-github" target="_blank"></a></li>
+						<li><a href="https://scholar.google.com/citations?user=GsTH8TwAAAAJ&hl=en&oi=ao" class="ai ai-google-scholar" target="_blank"></a></li>
+						<li><a href="https://orcid.org/0000-0002-2914-2200" class="ai ai-orcid" target="_blank"></a></li>
+						<li><a href="./CV_PostDoc__LANL_.pdf" class="ai ai-cv" target="_blank"></a></li>
+						<li><a href="https://www.linkedin.com/in/peter-hatton-82653430a/" class="fab fa-linkedin-in" target="_blank"><span class="label"></span></a></li>
+						<li><a href="#contact" class="icon fa-envelope"></a></li>
+					</ul>
+				</div>
+			</section>
 
-						</div>
-					</section>
+			<!-- About Me -->
+			<section id="about" class="two">
+				<div class="container">
 
-				<!-- Portfolio -->
-					<section id="portfolio" class="two">
-						<div class="container">
+					<header>
+						<h2>About Me</h2>
+					</header>
+					
+					<p><strong><i>
+						I am an accomplished materials scientist with extensive and varied experience in 
+						computational modeling of materials, complemented by a strong track record of 
+						publishing high-quality science. My strengths lie in my robust mathematical and 
+						computational background as well as my passion for conducting impactful, 
+						cutting-edge science focused on sustainable and environmentally conscious applications.
+					</i></strong></p>	
 
-							<header>
-								<h2>Portfolio</h2>
-							</header>
+					<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+					<!-- <p>
+						I think it would be good to note that I am focussing on exploratory materials 
+						science where the target is to find interesting affects rather than nailing down 
+						exactly what happens quantitatively.
+					</p>
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+					<p>
+						Also want to have a small section which focusses on personal stuff. Hobbies/achievements. Personality.
+					</p> -->
+				</div>
+			</section>
 
-						</div>
-					</section>
+			<!-- Portfolio -->
+			<!-- <section id="publications" class="six">
+				<div class="container">
 
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
+					<header>
+						<h2>
+							Research Highlights
+						</h2>
+					</header> -->
 
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
+					<!-- PMI-->
+					<!-- <li id="PMI" style="text-align: left;">
+						<strong style="font-weight: bold;"> 
+							Plasma-Materials Interactions: Applications to Tokamak Fusion Reactors 
+						</strong>
+					</li>
+					<br>
+					<p id="PMItext">
+						<i> -->
+							<!-- The accumulation of gas atoms in a fusion-reactors divertor material is a topic of great and 
+							long-standing interest to the plasma-facing materials community. Atomistic modelling has been
+							used to elucidate complex mechanisms which can occur in these environments. -->
+							<!-- It is of paramount importance to the safety and longevity of fusion reactor components that the 
+							mechanisms of damage in reactor materials is fully understood. Materials evolution can occur in
+							these environments which act to degrade the favourable properties of a material leading to failure.
+						</i>
+					</p>
+					<br>
+					<div class="image-side-container">
+						<figure class="image side"> -->
+						<!-- <a href="https://www.sciencedirect.com/science/article/abs/pii/S1359645424001745" class="image side" target="_blank"> -->
+							<!-- <img src="GraphicalAbstract_Concept.001.png" alt="Description of the image" style="width: 500px" /> -->
+						<!-- </a> -->
+						<!-- <figcaption>This is the caption for this image.</figcaption> -->
+						<!-- </figure>
+						<div class="imtext">
+							Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
 							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
-
+							laoreet eget cubilia 
 						</div>
-					</section>
+					</div>
+					<br> -->
+					<!-- <p class="publications">
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
+						[1] 
+						<strong class="author-name">Hatton, P.</strong>
+						, Perez, D., & Uberuaga, B. P. (2024). Changes in Dislocation Punching 
+						Behavior Due to Hydrogen Seeded Helium Bubble Growth in W (under-review).
 
-							<header>
-								<h2>Contact</h2>
-							</header>
+						<br>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+						[2] Lasa, A., Blondel, S., Cusentino, M. A., Dasgupta, D., 
+						<strong class="author-name">Hatton, P.</strong>
+						, Marian, J., Perez D., Setyawan W., Uberuaga B.P., Yu Q., & Wirth B.D. (2024). 
+						Development of multi-scale computational frameworks to solve fusion materials 
+						science challenges. Journal of Nuclear Materials, 594, 155011.
 
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
+						<br>
 
+						[3] 
+						<strong class="author-name">Hatton, P.</strong>
+						, Perez, D., Frolov, T., & Uberuaga, B. P. (2024). He bubble-induced phase 
+						transformation of W grain boundaries revealed by accelerated molecular dynamics. 
+						Acta Materialia, 269, 119821.
+						
+						<br>
+
+						[4] Lasa, A., Dasgupta, D., Baldwin, M. J., Cusentino, M. A., 
+						<strong class="author-name">Hatton, P.</strong>
+						, Perez, D., Uberuaga B.P., Yang L., & Wirth, B. D. (2024). Assessment of the 
+						literature about Be-W mixed material layer formation in the fusion reactor environment. 
+						Materials Research Express, 11, 032002.
+
+						<br>
+
+						[4] 
+						<strong class="author-name">Hatton, P.</strong>
+						, Hatton, M., Perez, D., & Uberuaga, B. P. (2022). The importance of long-timescale simulations 
+						for driven systems: An example of He bubble growth at a W GB. MRS Communications, 12(6), 1103-1110.
+						
+						<br>
+
+						[5] 
+						<strong class="author-name">Hatton, P.</strong>
+						, Perez, D., & Uberuaga, B. P. (2022). Be surface structures on W (110) and W (211): A DFT study. 
+						Acta Materialia, 235, 118012.
+						
+						<br>
+						<br>
+
+						This work was supported by the U.S. Department of Energy, Office of Fusion Energy Sciences (OFES) and 
+						Office of Advanced Scientific Computing Research through the Scientific Discovery through Advanced Computing (SciDAC) 
+						project on Plasma-Surface Interactions through UT-Battelle Subcontract No. 4000159718, and partially supported by 
+						OFES Award No. DE-SC0006661.
+					</p> -->
+
+					<!-- FUTURE-->
+					<!-- <li id="FUTURE" style="text-align: left;">
+						<strong style="font-weight: bold;"> 
+							Defect Transport in Complex Oxides and their Interfaces
+						</strong>
+					</li>
+					<br>
+					<p id="FUTUREtext">						
+						<i> 
+							The ability for a material to accomodate defects without amorphizing is strongly 
+							corellated to its radiation tolerence. This ability depends on the behavior of defects in
+							the bulk crystal structure and at extended defects like grain boundaries coupled to 
+							the transport between these regions.
+
+						</i>
+					</p>
+
+					<div class="image-side-container">
+						<a href="https://pubs.rsc.org/en/content/articlelanding/2023/ta/d2ta06102c" class="image side" target="_blank">
+							<img src="SROGraphicalAbstract.png" alt="Description of the image" style="width: 400px" /> -->
+						<!-- </a>
+						<div class="imtext">
+							This work is featured in a Los Alamos National Lab released magazine which 
+							can be viewed 
+							<a href="https://cdn.lanl.gov/93738b3d-231f-4012-978d-275c20bcf128.pdf" target="_blank">
+								here
+							</a>
 						</div>
-					</section>
+					</div>
+					<br>
+					<div class="image-side-container">
+						<a href="https://pubs.rsc.org/en/content/articlelanding/2023/ta/d2ta06102c" class="image side" target="_blank"> -->
+							<!-- <img src="GraphicalAbstract.png" alt="Description of the image" style="width: 300px" /> -->
+						<!-- </a>
+						<div class="imtext">
+							This work is featured in a Los Alamos National Lab released magazine which 
+							can be viewed 
+							<a href="https://cdn.lanl.gov/93738b3d-231f-4012-978d-275c20bcf128.pdf" target="_blank">
+								here
+							</a>
+						</div>
+					</div> -->
+					<!-- <p class="publications">
 
-			</div>
+						[6] 
+						<strong class="author-name">Hatton, P.</strong>
+						,& Uberuaga, B. P. (2024). A New Compositional Microscopic Degree of Freedom at Grain Boundaries in Complex Compounds: 
+						A Case Study in Spinel. Physical Chemistry Chemical Physics.
+
+						<br>
+
+						[7] 
+						<strong class="author-name">Hatton, P.</strong>
+						, & Uberuaga, B. P. (2023). Short range order in disordered spinels and the impact on cation vacancy transport. 
+						Journal of Materials Chemistry A, 11(7), 3471-3480.
+
+						<br>
+						<br>
+
+						This work was supported as part of FUTURE (Fundamental Understanding of Transport Under Reactor Extremes), 
+						an Energy Frontier Research Center funded by the U.S. Department of Energy (DOE), Office of Science, Basic Energy Sciences
+					</p> -->
+
+					<!-- Chlorine CdTe -->
+					<!-- <li id="CdTe" style="text-align: left;">
+						<strong style="font-weight: bold;"> 
+							Cl-Activated Magnetron Sputtered CdTe Solar Cells
+						</strong>
+					</li>
+					<br>
+					<p id="CdTetext">
+						<i> 
+							Cadmium Telluride (CdTe)-based solar cells have poor efficiency unless treated with Chlorine (Cl),
+							however, this treatment leads to surface rupture and failure in cells grown with magnetron sputtering.
+							The atomistic mechanisms behind these experimental processes remained a mystery for ~30 years.
+						</i>
+					</p> -->
+
+					<!-- <p class="publications">
+
+						[8] 
+						<strong class="author-name">
+							Hatton, P.
+						</strong>
+						, Watts, M. J., Abbas, A., Walls, J. M., Smith, R., & Goddard, P. (2021). Chlorine activated stacking fault 
+						removal mechanism in thin film CdTe solar cells: the missing piece. Nature Communications, 12(1), 4938.
+						
+						<br>
+
+						[9] Watts, M. J., 
+						<strong class="author-name">
+							Hatton, P.
+						</strong>
+						, Smith, R., Fiducia, T., Abbas, A., Greenhalgh, R., ... & Goddard, P. (2021). Chlorine passivation of 
+						grain boundaries in cadmium telluride solar cells. Physical Review Materials, 5(3), 035403.
+
+						<br>
+
+						[10] 
+						<strong class="author-name">
+							Hatton, P.
+						</strong>
+						, Abbas, A., Kaminski, P., Yilmaz, S., Watts, M., Walls, M., ... & Smith, R. (2020). Inert gas bubble formation 
+						in magnetron sputtered thin-film CdTe solar cells. Proceedings of the Royal Society A, 476(2239), 20200056.
+
+						<br>
+						<br>
+
+						This work was supported by EPSRC Supergen SuperSolar Hub (grant no. EP/J017361/1).
+					</p> -->
+				<!-- </div> -->
+			<!-- </section> -->
+
+			<!-- Hop Dec -->
+			<section id="hopdecorate" class="four" style="max-height: 650px;">
+				<div class="container">
+					<header>
+						<h2>
+							<strong>
+								Hop-Decorate Software
+							</strong>
+							<a href="https://github.com/lanl/Hop-Decorate" class="icon brands fa-github" target="_blank"></a>
+						</h2>
+					</header>
+					
+					<div class="image-side-container">
+						<a href="https://github.com/lanl/Hop-Decorate" class="image side" target="_blank">
+							<img src="images/hop-decorate-MEDIUM-01.png" alt="Description of the image" style="width: 400px"/>
+						</a>
+						<div class="imtext">
+							<strong style="font-weight: bold; font-size: 1.5em; margin-left: 10px;"> 
+								A high-throughput Molecular Dynamics workflow for generating atomistic 
+								databases of defect transport data in chemically complex materials. 	
+							</strong>
+							<br>
+							<br>
+							Developed at Los Alamos National Lab (LANL) as part of a massively-parallel
+							automated workflow for approximating diffusion tensors of defects in Medium and 
+							High Entropy Alloys with a focus on exploiting exascale computing resources.
+							<br>
+							<br>
+							Hop-Decorate is Open-Source under the BSD-3 License.
+						</div>
+					</div>
+					<br>
+				</div>
+			</section>	
+
+			<!-- Personal Projects -->
+			<section id="portfolio" class="two">
+				<div class="containers">
+					<header>
+						<h2>Personal Projects</h2>
+					</header>
+					<!-- <p>
+						There are a number of personal interests and projects which I contribute to that are not
+						financially supported by any entity. Below is a sample of those projects which you can click
+						on to learn more.
+					</p> -->
+					<div class="row">
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<header>
+									<strong style="font-weight: bold; font-size: 1.3em">
+										Batching Molecular Dynamics Simulations for Increased Efficiency on NVIDIA GPUs
+									</strong>
+									<br>
+									<p style="line-height: 1.5; font-size: 1.1em">
+										Atomistic simulations with small computational footprints pose a serious problem
+										for efficiency when executed on GPUs - as is becoming the norm. I have proposed
+										a method of batching simulations together to increase combined efficiency and 
+										throughput on High-Performance Computers which feature NVIDIA A100 GPUs.
+										LINK TO POWERPOINT
+									</p>    
+								</header>
+							</article>
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+								<header>
+									<strong style="font-weight: bold; font-size: 1.3em">
+										Music
+									</strong>
+									<br>
+									<p style="line-height: 1.5; font-size: 1.1em">
+										Using a miniture home-studio setup and a small understanding of sound engineering
+										I write, record and master classic-rock inspired music - a true passion of mine. 
+									</p>
+								</header>
+							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<a href="https://github.com/PeteHatton/pyBJ" class="image fit" target="_blank"><img src="images/pic02.jpg" alt="" /></a>
+								<header>
+									<strong style="font-weight: bold; font-size: 1.3em">
+										python-BlackJack (pyBJ)
+									</strong>
+									<br>
+									<p style="line-height: 1.5; font-size: 1.1em">
+										A large scale time-dependent BlackJack simulator for evaluating 
+										static decision and betting strategies. This code is part of an ongoing 
+										personal project to dispell commonly held superstition and false 
+										intuition about games of chance through the use of rigorous theory 
+										and simulation - something that is severly lacking in the community.
+									</p>
+								</header>
+							</article>
+							<article class="item">
+								<a href="https://etoro.tw/3VwYys2" class="image fit" target="_blank"><img src="images/pic02.jpg" alt="" /></a>
+								<header>
+									<strong style="font-weight: bold; font-size: 1.3em">
+										Trading & Investment portfolio
+									</strong>
+									<br>
+									<p style="line-height: 1.5; font-size: 1.1em">
+										I am an avid investor mainly concentrating on long-term returns in 
+										Exchange Traded Funds (ETFs) and technology focused companies. 
+										I have recently opened a public eToro trading account so that you can 
+										view my active portfolio.
+									</p>
+								</header>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+			<section id="contact" class="six" style="max-height: 250px; display: flex; align-items: center;">
+				<div class="container contact-container">
+					<header>
+						<h2>
+							Contact
+						</h2>
+					</header>
+					
+					<h3 style="font-size: 1.1em">
+						<i class="icon fa-envelope"></i>&nbsp;Pete.Hatton21@gmail.com <br>
+						<i class="icon fa-envelope"></i>&nbsp;Peter_Hatton@lanl.gov
+					</h3>
+				</div>
+			</section>
+		</div>
 
 		<!-- Footer -->
-			<div id="footer">
+		<div id="footer">
+			<ul class="copyright">
+				<li>
+					<strong>
+						<i>"Science without results is just witchcraft"</i> - Cave Johnson 1943
+					</strong>
+				</li>
+			</ul>
 
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</div>
+			<!-- Copyright -->
+			<ul class="copyright">
+				<li>
+					&copy; Peter Hatton 2024. All rights reserved.
+				</li>
+				<li>
+					Design: <a href="http://html5up.net">HTML5 UP</a>
+				</li>
+			</ul>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
